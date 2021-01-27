@@ -11,7 +11,7 @@ export const ApiService = createClient({
     onRequest: async () => {
       return {
         headers: {},
-        retries: EnvService.isProd() ? 3 : 1,
+        retries: EnvService.isProd() ? 3 : 0,
       };
     },
   },
