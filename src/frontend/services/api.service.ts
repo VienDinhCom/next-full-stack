@@ -1,8 +1,10 @@
-import { createReactClient } from 'soki/client/react';
+import { createClient } from 'soki/client';
 import { RootSchema } from '@shared/schemas/root.schema';
 import { EnvService } from '@shared/services/env.service';
 
-export const ApiService = createReactClient({
+export { useQuery, useMuation, getFiles } from 'soki/client';
+
+export const ApiService = createClient({
   RootSchema,
   endpoint: '/api',
   options: {
