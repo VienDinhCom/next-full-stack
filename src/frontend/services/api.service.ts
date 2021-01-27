@@ -5,10 +5,12 @@ import { EnvService } from '@shared/services/env.service';
 export const ApiService = createReactClient({
   RootSchema,
   endpoint: '/api',
-  onRequest: async () => {
-    return {
-      headers: {},
-      retries: EnvService.isProd() ? 3 : 1,
-    };
+  options: {
+    onRequest: async () => {
+      return {
+        headers: {},
+        retries: EnvService.isProd() ? 3 : 1,
+      };
+    },
   },
 });

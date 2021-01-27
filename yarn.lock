@@ -3561,10 +3561,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-soki@^1.0.17:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/soki/-/soki-1.0.17.tgz#55a38d7ea1bc45809c918de458b32cbf35734956"
-  integrity sha512-ardSLIHdWm167dbX7+2nd034fvFxDrZiocurv4S+bS6YhCO4FM1cAvDmyEXJu/bRum2YpDDQW2VJRb+QZz/eSA==
+soki@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/soki/-/soki-1.0.18.tgz#6687309325afae5af6df629db74580843c035ec0"
+  integrity sha512-La4PxfBaSqZ4nY8UUPQ3+HkJ6SsS8snr8ZYCb25mBPT0zezxkbz3VMrWkKXnIvhaTAu4lFKN0CRoj2Cn8lXcaw==
   dependencies:
     detect-node "^2.0.4"
     fetch-retry "^4.0.1"
