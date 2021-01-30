@@ -1,29 +1,36 @@
 import { ApiService, useQuery } from '@frontend/services/api.service';
 import { DefaultLayout } from '@frontend/components/Layouts/DefaultLayout';
 
-export default function Page() {
-  const { loading, data, error, refetch } = useQuery(async () => {
-    return ApiService.message.hello({ name: 'Vien' });
-  }, []);
+function getData() {
+  return ApiService.message.hello({ name: 'Vien' });
+}
 
-  if (loading)
-    return (
-      <DefaultLayout>
-        <p>Loading ...</p>
-      </DefaultLayout>
-    );
+export async function getServerSideProps() {
+  const initialData = await getData();
+  return { props: { initialData } };
+}
 
-  if (error)
-    return (
-      <DefaultLayout>
-        <p>Error: {error.message}</p>
-      </DefaultLayout>
-    );
+interface Props {
+  initialData: string;
+}
+
+export default function Page({ initialData }: Props) {
+  const { loading, data, error, refetch } = useQuery(getData, { deps: [], initialData });
 
   return (
     <DefaultLayout>
-      <h1>{data}</h1>
-      <button onClick={refetch}>Refetch</button>
+      {(() => {
+        if (loading) return <p>Loading ...</p>;
+
+        if (error) return <p>Error: {error.message}</p>;
+
+        return (
+          <div>
+            <h1>{data}</h1>
+            <button onClick={refetch}>Refetch</button>
+          </div>
+        );
+      })()}
     </DefaultLayout>
   );
 }
