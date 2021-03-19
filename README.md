@@ -1,4 +1,4 @@
-# Next Full Stack [WIP]
+# Next Full Stack
 
 ## Getting Started
 
