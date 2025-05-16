@@ -1,4 +1,4 @@
-import { database } from '@src/shared/server/database'
+import { database } from '@src/core/server/database'
 import { betterAuth } from 'better-auth'
 import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 

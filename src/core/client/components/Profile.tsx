@@ -1,4 +1,4 @@
-import { auth } from '@src/shared/client/lib/auth'
+import { auth } from '@src/core/client/lib/auth'
 import { SignIn } from './SignIn'
 import { SignUp } from './SignUp'
 
