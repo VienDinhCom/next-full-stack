@@ -15,16 +15,22 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.7",
+
     "astro": "^5.7.13",
     "better-auth": "^1.2.7",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.43.1",
-    "pg": "^8.16.0"
+    "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.0",
     "@eslint-react/eslint-plugin": "^1.49.0",
     "@types/pg": "^8.15.2",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "astro-eslint-parser": "^1.2.2",
     "drizzle-kit": "^0.31.1",
     "eslint": "^9.26.0",
