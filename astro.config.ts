@@ -5,6 +5,7 @@ import { defineConfig, envField } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
   server: { port: 3000 },
+  output: 'server',
   integrations: [react()],
   env: {
     schema: {
@@ -13,5 +14,4 @@ export default defineConfig({
       BETTER_AUTH_URL: envField.string({ context: 'server', access: 'secret' }),
     },
   },
-
 })
