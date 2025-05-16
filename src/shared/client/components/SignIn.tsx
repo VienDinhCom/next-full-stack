@@ -1,6 +1,6 @@
 import { useZodForm } from '@src/shared/client/hooks/use-zod-form'
 import { auth } from '@src/shared/client/utills/auth'
-import { z } from 'zod'
+import { z } from 'astro:schema'
 
 const FormSchema = z.object({
   email: z.string().email('Invalid email address'),

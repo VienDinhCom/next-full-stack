@@ -1,6 +1,6 @@
 import { useForm, type UseFormProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import z, { ZodSchema } from "zod";
+import z, { type ZodSchema } from "astro:schema";
 
 export type Values<S extends ZodSchema> = z.infer<S>;
 
