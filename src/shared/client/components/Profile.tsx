@@ -1,4 +1,4 @@
-import { auth } from '@src/utils/client/auth'
+import { auth } from '@src/shared/client/utills/auth'
 import { SignIn } from './SignIn'
 import { SignUp } from './SignUp'
 

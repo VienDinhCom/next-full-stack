@@ -1,5 +1,5 @@
-import { useZodForm } from '@src/hooks/use-zod-form'
-import { auth } from '@src/utils/client/auth'
+import { useZodForm } from '@src/shared/client/hooks/use-zod-form'
+import { auth } from '@src/shared/client/utills/auth'
 import { z } from 'zod'
 
 const FormSchema = z.object({
