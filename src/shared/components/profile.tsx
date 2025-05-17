@@ -1,6 +1,6 @@
-import { auth } from '@src/core/client/lib/auth'
-import { SignIn } from './SignIn'
-import { SignUp } from './SignUp'
+import { SignIn } from '@src/shared/components/sign-in'
+import { SignUp } from '@src/shared/components/sign-up'
+import { auth } from '@src/shared/lib/auth'
 
 export function Profile() {
   const { data: session, isPending, error, refetch } = auth.useSession()

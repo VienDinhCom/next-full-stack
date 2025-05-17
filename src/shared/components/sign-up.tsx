@@ -1,5 +1,5 @@
-import { useZodForm } from '@src/core/client/hooks/use-zod-form'
-import { auth } from '@src/core/client/lib/auth'
+import { useZodForm } from '@src/shared/hooks/use-zod-form'
+import { auth } from '@src/shared/lib/auth'
 import { z } from 'astro:schema'
 
 const FormSchema = z.object({

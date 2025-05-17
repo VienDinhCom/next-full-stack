@@ -1,4 +1,4 @@
-import { auth } from "@src/core/server/lib/auth";
+import { auth } from "@src/shared/lib/auth/auth";
 import type { APIRoute } from "astro";
  
 export const ALL: APIRoute = async (ctx) => {
