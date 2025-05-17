@@ -5,14 +5,14 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "src/shared/lib/style.css",
+    "css": "src/shared/lib/styles/global.css",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
     "components": "@src/shared/components",
-    "utils": "@src/shared/lib/utils",
+    "utils": "@src/shared/lib/styles/index",
     "ui": "@src/shared/components/ui",
     "lib": "@src/shared/lib",
     "hooks": "@src/shared/hooks"

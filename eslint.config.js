@@ -24,5 +24,8 @@ export default antfu({
       ignore: ["README.md"],
     }],
   },
-  ignores: ["**/migrations/*"],
+  ignores: [
+    "src/shared/components/ui/*",
+    "src/shared/lib/database/migrations/*",
+  ],
 });
