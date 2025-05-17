@@ -1,5 +1,5 @@
 import { useZodForm } from '@src/shared/hooks/use-zod-form'
-import { auth } from '@src/shared/lib/auth'
+import { authClient } from '@src/shared/lib/auth'
 import { z } from 'astro:schema'
 
 const FormSchema = z.object({
@@ -17,7 +17,7 @@ export function SignIn() {
   })
 
   const onSubmit = form.handleSubmit(async ({ email, password }) => {
-    await auth.signIn.email({
+    await authClient.signIn.email({
       email,
       password,
       callbackURL: '/',
