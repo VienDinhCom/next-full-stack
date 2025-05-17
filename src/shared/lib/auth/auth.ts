@@ -1,10 +1,11 @@
-import { database } from '@src/shared/lib/database'
-import { betterAuth } from 'better-auth'
-import { drizzleAdapter } from 'better-auth/adapters/drizzle'
+import { betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+
+import { database } from "@src/shared/lib/database";
 
 export const auth = betterAuth({
   database: drizzleAdapter(database, {
-    provider: 'pg',
+    provider: "pg",
   }),
   emailAndPassword: {
     enabled: true,
@@ -12,4 +13,4 @@ export const auth = betterAuth({
   rateLimit: {
     enabled: true,
   },
-})
+});
