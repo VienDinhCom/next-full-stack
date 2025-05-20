@@ -1,16 +1,10 @@
-import antfu from "@antfu/eslint-config";
+import { defineConfig } from "@esmate/eslint";
 
-export default antfu({
+// https://github.com/antfu/eslint-config
+export default defineConfig({
   type: "app",
-  typescript: true,
   astro: true,
   react: true,
-  formatters: true,
-  stylistic: {
-    indent: 2,
-    semi: true,
-    quotes: "double",
-  },
   rules: {
     "no-console": ["warn"],
     "antfu/no-top-level-await": ["off"],
