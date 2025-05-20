@@ -1,6 +1,6 @@
 import { z } from "astro:schema";
+import { useZodForm } from "deves-react/hook-form";
 
-import { useZodForm } from "@src/shared/hooks/use-zod-form";
 import { authClient } from "@src/shared/lib/auth";
 
 const FormSchema = z.object({

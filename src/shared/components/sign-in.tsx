@@ -1,6 +1,7 @@
 import { z } from "astro:schema";
+import { useZodForm } from "deves-react/hook-form";
+import { Button } from "deves-react/shadcn";
 
-import { useZodForm } from "@src/shared/hooks/use-zod-form";
 import { authClient } from "@src/shared/lib/auth";
 
 const FormSchema = z.object({
@@ -39,7 +40,7 @@ export function SignIn() {
           <input type="password" {...form.register("password")} />
         </label>
         <br />
-        <button type="submit">Sign In</button>
+        <Button type="submit">Sign In</Button>
       </form>
     </div>
   );
