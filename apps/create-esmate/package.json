@@ -1,13 +1,20 @@
 {
   "name": "create-esmate",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-deves": "./cli.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "dependencies": {
+    "@inquirer/prompts": "^7.4.1",
+    "@types/fs-extra": "^11.0.4",
+    "commander": "^13.1.0",
+    "es-toolkit": "^1.35.0",
+    "fs-extra": "^11.3.0",
+    "globby": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1"
+  }
 }
