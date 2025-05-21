@@ -1,0 +1,41 @@
+{
+  "name": "astro-react-fullstack",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "astro": "^5.7.13",
+    "better-auth": "^1.2.7",
+    "deves-react": "^0.0.2",
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.2.7",
+    "@esmate/eslint": "^0.0.19",
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/pg": "^8.15.2",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.31.1",
+    "eslint": "^9.26.0",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3"
+  }
+}
