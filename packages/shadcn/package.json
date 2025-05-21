@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "rslib build",
+    "watch": "rslib build --watch",
     "prebuild": "tsx shadcn.ts",
     "prepack": "pnpm build"
   },

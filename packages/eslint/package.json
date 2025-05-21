@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "rslib build",
+    "watch": "rslib build --watch",
     "prepack": "rslib build",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
