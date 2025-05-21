@@ -1,19 +1,9 @@
 import type { Config } from "prettier";
+import path from "node:path";
 import makeSynchronized from "make-synchronized";
 import { resolveConfig, resolveConfigFile } from "prettier";
 
-export const defaultConfig: Config = {
-  semi: true,
-  tabWidth: 2,
-  useTabs: false,
-  printWidth: 120,
-  endOfLine: "auto",
-  singleQuote: false,
-  proseWrap: "always",
-  trailingComma: "all",
-};
-
-export default makeSynchronized(import.meta, async (): Promise<Config> => {
+export default makeSynchronized(import.meta, async (defaultConfig: Config = {}): Promise<Config> => {
   const configFile = await resolveConfigFile();
 
   if (configFile) {
@@ -24,3 +14,9 @@ export default makeSynchronized(import.meta, async (): Promise<Config> => {
 
   return defaultConfig;
 });
+
+export function importPlugin(plugin: string): string {
+  const __dirname = new URL(".", import.meta.url).pathname;
+
+  return path.join(__dirname, "plugins", `${plugin}.js`);
+}
