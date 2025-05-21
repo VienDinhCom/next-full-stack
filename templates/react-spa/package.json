@@ -1,0 +1,42 @@
+{
+  "name": "deves-react-spa",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "deves": "react",
+  "scripts": {
+    "dev": "deves task dev",
+    "build": "deves task build",
+    "start": "deves task start",
+    "check": "deves task check",
+    "fix": "deves task fix"
+  },
+  "dependencies": {
+    "@react-router/fs-routes": "^7.5.0",
+    "@react-router/node": "^7.5.0",
+    "isbot": "^5.1.26",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.5.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "deves": "^1.0.27",
+    "eslint": "^9.24.0",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.1"
+  },
+  "tasks": {
+    "dev": "react-router dev",
+    "build": "react-router typegen && tsc --noEmit && react-router build",
+    "start": "vite preview --port 3000",
+    "check": "deves lint && deves fmt --check",
+    "fix": "deves lint --fix && deves fmt"
+  }
+}
