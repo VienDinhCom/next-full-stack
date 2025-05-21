@@ -1,6 +1,6 @@
+import { authClient } from "@src/shared/auth";
 import { SignIn } from "@src/shared/components/sign-in";
 import { SignUp } from "@src/shared/components/sign-up";
-import { authClient } from "@src/shared/auth";
 
 export function Profile() {
   const { data: session, isPending, error, refetch } = authClient.useSession();
@@ -39,8 +39,12 @@ export function Profile() {
         Username:
         {session.user.name}
       </p>
-      <button type="button" onClick={() => authClient.signOut()}>Sign Out</button>
-      <button type="button" onClick={() => refetch()}>Refresh Session</button>
+      <button type="button" onClick={() => authClient.signOut()}>
+        Sign Out
+      </button>
+      <button type="button" onClick={() => refetch()}>
+        Refresh Session
+      </button>
     </div>
   );
 }

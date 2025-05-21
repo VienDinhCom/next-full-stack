@@ -8,9 +8,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (isAuthed) {
     context.locals.user = isAuthed.user;
     context.locals.session = isAuthed.session;
-  }
-
-  else {
+  } else {
     context.locals.user = null;
     context.locals.session = null;
   }
