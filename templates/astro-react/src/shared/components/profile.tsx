@@ -1,6 +1,6 @@
 import { SignIn } from "@src/shared/components/sign-in";
 import { SignUp } from "@src/shared/components/sign-up";
-import { authClient } from "@src/shared/lib/auth";
+import { authClient } from "@src/shared/auth";
 
 export function Profile() {
   const { data: session, isPending, error, refetch } = authClient.useSession();

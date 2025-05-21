@@ -9,7 +9,7 @@ export default defineConfig(
     formatters: "prettier",
     ignores: [
       "src/shared/components/ui/*",
-      "src/shared/lib/database/migrations/*",
+      "src/shared/database/migrations/*",
     ],
   },
 );

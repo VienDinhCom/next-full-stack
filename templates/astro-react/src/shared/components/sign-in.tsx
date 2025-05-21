@@ -2,7 +2,7 @@ import { Button } from "@esmate/shadcn";
 import { useZodForm } from "@esmate/shadcn/hooks";
 import { z } from "astro:schema";
 
-import { authClient } from "@src/shared/lib/auth";
+import { authClient } from "@src/shared/auth";
 
 const FormSchema = z.object({
   email: z.string().email("Invalid email address"),
