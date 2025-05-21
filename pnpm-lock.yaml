@@ -210,6 +210,31 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
+  packages/prettier:
+    dependencies:
+      es-toolkit:
+        specifier: ^1.38.0
+        version: 1.38.0
+      make-synchronized:
+        specifier: ^0.7.2
+        version: 0.7.2
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
+      prettier-plugin-tailwindcss:
+        specifier: ^0.6.11
+        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
+    devDependencies:
+      '@rslib/core':
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.8.3)
+      '@types/node':
+        specifier: ^22.8.1
+        version: 22.15.21
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
   packages/shadcn:
     dependencies:
       '@hookform/resolvers':
