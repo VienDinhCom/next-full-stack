@@ -41,6 +41,7 @@ export function defineConfig(options?: Options, config?: Config): Config {
 
   if (options?.astro) {
     plugins.push(importPlugin("astro"));
+
     overrides.push({
       files: "*.astro",
       options: {
@@ -53,6 +54,8 @@ export function defineConfig(options?: Options, config?: Config): Config {
     const config = options.tailwind === true ? {} : options.tailwind;
 
     configs.push(config as Config);
+
+    // Tailwind must come last in the plugins array.
     plugins.push(importPlugin("tailwind"));
   }
 
