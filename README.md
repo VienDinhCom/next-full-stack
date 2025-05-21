@@ -1,6 +1,6 @@
 # ESMate
 
-Tools & Templates for Full Stack Developemt with React.js, Astro.js, Next.js, Hono.js ect.
+Tools & Templates for Full Stack Developemt with Node.js, React.js, Astro.js, Next.js, Hono.js ect.
 
 
 ## Using this example
