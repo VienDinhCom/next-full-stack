@@ -4,7 +4,21 @@ import antfu from "@antfu/eslint-config";
 import prettier from "eslint-config-prettier";
 
 type Options = Omit<OptionsConfig, "formatters"> & {
+  /**
+   * Use external formatters to format files.
+   *
+   * When set to `true`, it will enable all Antfu formatters.
+   *
+   * When set to `prettier`, it will disable rules that conflict with Prettier.
+   *
+   * @default false
+   */
   formatters?: OptionsConfig["formatters"] | "prettier";
+  /**
+   * Ignores files from formatting.
+   *
+   * So you don't have to use .eslintignore file.
+   */
   ignores?: string[];
 };
 
