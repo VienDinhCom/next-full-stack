@@ -1,5 +1,5 @@
+import { useZodForm } from "@esmate/shadcn/hooks";
 import { z } from "astro:schema";
-import { useZodForm } from "deves-react/hook-form";
 
 import { authClient } from "@src/shared/lib/auth";
 
