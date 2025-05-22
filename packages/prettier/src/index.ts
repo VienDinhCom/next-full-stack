@@ -1,4 +1,5 @@
 import type { Config } from "prettier";
+import type { AstroOptions } from "./plugins/astro";
 import type { SvelteOptions } from "./plugins/svelte";
 import type { TailwindOptions } from "./plugins/tailwind";
 import { importPlugin } from "./utils";
@@ -9,7 +10,7 @@ interface Options {
    *
    * http://npm.im/prettier-plugin-astro
    */
-  astro?: boolean;
+  astro?: boolean | AstroOptions;
   /**
    * Ignores files from formatting.
    *
@@ -64,6 +65,7 @@ export function defineConfig(options?: Options, config?: Config): Config {
 
   if (options?.astro) {
     plugins.push(importPlugin("astro"));
+    configs.push(options.astro === true ? {} : options.astro as Config);
     overrides.push({ files: "*.astro", options: { parser: "astro" } });
   }
 
@@ -72,6 +74,7 @@ export function defineConfig(options?: Options, config?: Config): Config {
     configs.push(options.svelte === true ? {} : options.svelte as Config);
   }
 
+  // Must com last to avoid conflicts with other plugins
   if (options?.tailwind) {
     plugins.push(importPlugin("tailwind"));
     configs.push(options.tailwind === true ? {} : options.tailwind as Config);
