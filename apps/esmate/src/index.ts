@@ -1,21 +1,17 @@
+#!/usr/bin/env node
+
 import { defineCommand, runMain } from "citty";
 
-import { version } from "../package.json" with { type: "json" };
 import { fmt } from "./commands/fmt";
 import { lint } from "./commands/lint";
+import { pkg } from "./utils";
 
 const main = defineCommand({
   meta: {
     name: "esmate",
+    version: pkg.version,
     description: "Uncomplicate JavaScript",
-    version,
   },
-  // setup() {
-  //   console.log("Setup");
-  // },
-  // cleanup() {
-  //   console.log("Cleanup");
-  // },
   subCommands: {
     fmt,
     lint,
