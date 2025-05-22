@@ -1,4 +1,6 @@
 import { defineCommand, runMain } from "citty";
+
+import { fmt } from "./commands/fmt";
 import { lint } from "./commands/lint";
 
 const main = defineCommand({
@@ -14,6 +16,7 @@ const main = defineCommand({
   //   console.log("Cleanup");
   // },
   subCommands: {
+    fmt,
     lint,
   },
 });
