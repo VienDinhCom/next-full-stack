@@ -1,4 +1,5 @@
 import type { Config } from "prettier";
+import type { SvelteOptions } from "./plugins/svelte";
 import type { TailwindOptions } from "./plugins/tailwind";
 import { importPlugin } from "./utils";
 
@@ -6,21 +7,27 @@ interface Options {
   /**
    * Enable Astro support.
    *
-   * https://github.com/withastro/prettier-plugin-astro
+   * http://npm.im/prettier-plugin-astro
    */
   astro?: boolean;
-  /**
-   * Enable TailwindCSS support.
-   *
-   * https://github.com/tailwindlabs/prettier-plugin-tailwindcss
-   */
-  tailwind?: boolean | TailwindOptions;
   /**
    * Ignores files from formatting.
    *
    * So you don't have to use .prettierignore file.
    */
   ignores?: string[];
+  /**
+   * Enable Svelte support.
+   *
+   * http://npm.im/prettier-plugin-svelte
+   */
+  svelte?: boolean | SvelteOptions;
+  /**
+   * Enable TailwindCSS support.
+   *
+   * http://npm.im/prettier-plugin-tailwindcss
+   */
+  tailwind?: boolean | TailwindOptions;
 }
 
 export function defineConfig(options?: Options, config?: Config): Config {
@@ -39,36 +46,36 @@ export function defineConfig(options?: Options, config?: Config): Config {
   const plugins: Config["plugins"] = config?.plugins || [];
   const overrides: Config["overrides"] = config?.overrides || [];
 
-  if (options?.astro) {
-    plugins.push(importPlugin("astro"));
+  // Ignores files from formatting.
+  {
+    const ignores: string[] = ["pnpm-lock.yaml"];
+
+    if (options?.ignores) {
+      ignores.push(...options.ignores);
+    }
 
     overrides.push({
-      files: "*.astro",
+      files: ignores,
       options: {
-        parser: "astro",
+        requirePragma: true,
       },
     });
   }
 
-  if (options?.tailwind) {
-    const config = options.tailwind === true ? {} : options.tailwind;
-
-    configs.push(config as Config);
-
-    // Tailwind must come last in the plugins array.
-    plugins.push(importPlugin("tailwind"));
+  if (options?.astro) {
+    plugins.push(importPlugin("astro"));
+    overrides.push({ files: "*.astro", options: { parser: "astro" } });
   }
 
-  // Ignores files from formatting.
-  overrides.push({
-    files: [
-      "pnpm-lock.yaml",
-      ...(options?.ignores || []),
-    ],
-    options: {
-      requirePragma: true,
-    },
-  });
+  if (options?.svelte) {
+    plugins.push(importPlugin("svelte"));
+    configs.push(options.svelte === true ? {} : options.svelte as Config);
+  }
+
+  if (options?.tailwind) {
+    plugins.push(importPlugin("tailwind"));
+    configs.push(options.tailwind === true ? {} : options.tailwind as Config);
+  }
 
   return {
     ...configs.reduce((prev, curr) => ({ ...prev, ...curr }), defaultConfig),
