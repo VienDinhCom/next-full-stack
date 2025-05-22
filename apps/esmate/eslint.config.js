@@ -1,12 +1,7 @@
-import antfu from "@antfu/eslint-config";
+// @ts-check
+import { defineConfig } from "@esmate/eslint";
 
-export default antfu({
+export default defineConfig({
   type: "lib",
-  typescript: true,
-  formatters: true,
-  stylistic: {
-    indent: 2,
-    semi: true,
-    quotes: "double",
-  },
+  formatters: "prettier",
 });
