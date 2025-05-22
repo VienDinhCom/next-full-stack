@@ -72,6 +72,7 @@ export function defineConfig(options?: Options, config?: Config): Config {
   if (options?.svelte) {
     plugins.push(importPlugin("svelte"));
     configs.push(options.svelte === true ? {} : options.svelte as Config);
+    overrides.push({ files: "*.svelte", options: { parser: "svelte" } });
   }
 
   // Must com last to avoid conflicts with other plugins
