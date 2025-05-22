@@ -3,11 +3,20 @@
   "type": "module",
   "version": "0.0.10",
   "license": "MIT",
+  "exports": {
+    "./*": {
+      "types": "./dist/exports/*.d.ts",
+      "import": "./dist/exports/*.js"
+    }
+  },
+  "bin": {
+    "esmate": "./dist/index.js"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "rslib build --watch",
+    "watch": "rslib build --watch",
     "build": "rslib build",
     "prepack": "rslib build",
     "lint": "eslint",
