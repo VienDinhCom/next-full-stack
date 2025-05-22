@@ -3,17 +3,7 @@ import type { Linter } from "eslint";
 import antfu from "@antfu/eslint-config";
 import prettier from "eslint-config-prettier";
 
-type Options = Omit<OptionsConfig, "formatters"> & {
-  /**
-   * Use external formatters to format files.
-   *
-   * When set to `true`, it will enable all Antfu formatters.
-   *
-   * When set to `prettier`, it will disable rules that conflict with Prettier.
-   *
-   * @default false
-   */
-  formatters?: OptionsConfig["formatters"] | "prettier";
+type Options = OptionsConfig & {
   /**
    * Ignores files from formatting.
    *
@@ -31,18 +21,14 @@ type Options = Omit<OptionsConfig, "formatters"> & {
  * @returns An array of ESLint flat config items.
  */
 export function defineConfig(options: Options, ...configs: Linter.Config[]): ReturnType<typeof antfu> {
-  const { formatters: formatterOption, ...restOptions } = options;
+  const { formatters, ...restOptions } = options;
   const restConfigs: TypedFlatConfigItem[] = configs || [];
 
-  // Turns off all rules that are unnecessary or might conflict with Prettier.
-  if (formatterOption === "prettier") {
+  if (!formatters) {
     restConfigs.push(prettier);
   }
 
-  const formatters: OptionsConfig["formatters"] = formatterOption === "prettier" ? undefined : formatterOption;
-
   return antfu({
-    formatters,
     stylistic: {
       indent: 2,
       semi: true,
