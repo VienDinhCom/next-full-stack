@@ -1,13 +1,14 @@
 import { defineCommand, runMain } from "citty";
 
+import { version } from "../package.json" with { type: "json" };
 import { fmt } from "./commands/fmt";
 import { lint } from "./commands/lint";
 
 const main = defineCommand({
   meta: {
     name: "esmate",
-    version: "1.0.0",
-    description: "Citty playground CLI",
+    description: "Uncomplicate JavaScript",
+    version,
   },
   // setup() {
   //   console.log("Setup");
