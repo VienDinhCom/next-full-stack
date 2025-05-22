@@ -1,11 +1,12 @@
-import { npx } from "@src/utils";
 import { defineCommand } from "citty";
 import { consola } from "consola";
+
+import { npx } from "@src/utils";
 
 export const lint = defineCommand({
   meta: {
     name: "lint",
-    description: "Lint JavaScript/TypeScript source code.",
+    description: "Lint JavaScript/TypeScript source code",
   },
   args: {
     fix: {
@@ -14,7 +15,7 @@ export const lint = defineCommand({
     },
     files: {
       type: "positional",
-      description: "Files and folders to lint",
+      description: "Files, folders, or globs to lint",
       required: false,
     },
   },
@@ -38,9 +39,7 @@ export const lint = defineCommand({
       consola.start("Linting...");
 
       npx(`eslint ${options.join(" ")} ${files.join(" ")}`);
-    }
-
-    catch (error) {
+    } catch (error) {
       consola.error(error);
     }
   },
