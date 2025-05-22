@@ -24,9 +24,9 @@ type Options = Omit<OptionsConfig, "formatters"> & {
 
 /**
  * This function is a wrapper around the `@antfu/eslint-config` package.
- * For more details, see https://github.com/antfu/eslint-config.
+ * For more details, see http://npm.im/@antfu/eslint-config.
  *
- * @param options - The options for the Antfu config.
+ * @param options - The options for the @antfu/eslint-config.
  * @param configs - Additional ESLint configs to include.
  * @returns An array of ESLint flat config items.
  */
