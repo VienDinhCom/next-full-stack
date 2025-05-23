@@ -39,6 +39,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: npx changelogithub # or changelogithub@0.12 to ensure a stable result
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Release GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ steps.generate_release_tag.outputs.next_release_tag }}
+          tag_name: ${{ steps.generate_release_tag.outputs.next_release_tag }}
+          token: ${{secrets.GITHUB_TOKEN}}
+          generate_release_notes: true
