@@ -16,7 +16,7 @@
         ".env*"
       ],
       "outputs": [
-        "dist"
+        "dist/**"
       ]
     },
     "fix": {
