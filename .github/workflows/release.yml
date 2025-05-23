@@ -35,14 +35,7 @@ jobs:
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm run release
+          createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Release GitHub
-        uses: softprops/action-gh-release@v2
-        with:
-          name: Release ${{ steps.generate_release_tag.outputs.next_release_tag }}
-          tag_name: ${{ steps.generate_release_tag.outputs.next_release_tag }}
-          token: ${{secrets.GITHUB_TOKEN}}
-          generate_release_notes: true
