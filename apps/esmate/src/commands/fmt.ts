@@ -38,8 +38,6 @@ export const fmt = defineCommand({
         files.push(".");
       }
 
-      consola.start("Formatting...");
-
       npx(`prettier ${options.join(" ")} ${files.join(" ")}`);
     } catch (error) {
       consola.error(error);

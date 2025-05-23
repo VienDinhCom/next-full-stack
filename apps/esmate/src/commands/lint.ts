@@ -36,8 +36,6 @@ export const lint = defineCommand({
         files.push(".");
       }
 
-      consola.start("Linting...");
-
       npx(`eslint ${options.join(" ")} ${files.join(" ")}`);
     } catch (error) {
       consola.error(error);
