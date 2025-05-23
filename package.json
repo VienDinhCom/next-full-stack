@@ -4,11 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "turbo run --filter='./packages/*' dev",
-    "build": "turbo run --filter='./packages/*' build",
     "fix": "turbo run fix",
     "check": "turbo run check",
-    "release": "changeset version && changeset publish"
+    "dev": "turbo run --filter='./packages/*' dev",
+    "build": "turbo run --filter='./packages/*' build",
+    "release": "changeset version && changeset publish",
+    "prerelease": "pnpm run build && pnpm run check"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",

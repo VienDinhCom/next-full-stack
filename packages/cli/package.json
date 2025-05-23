@@ -1,7 +1,7 @@
 {
   "name": "esmate",
   "type": "module",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "description": "Uncomplicate JavaScript",
   "license": "MIT",
   "exports": {
