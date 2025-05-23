@@ -1,23 +1,41 @@
+import type { ConcurrentlyCommandInput } from "concurrently";
+import type {JsonValue} from 'type-fest';
+
+import concurrently from "concurrently";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import process from "node:process";
 
-export function shell(command: string): void {
+export function execSingly(command: string | string[]): void {
   const { env } = process;
+  const cmd = Array.isArray(command) ? command.join(" && ") : command;
 
-  spawnSync(command, { shell: true, stdio: "inherit", env });
+  spawnSync(cmd, { shell: true, stdio: "inherit", env });
+}
+
+export async function execParallelly(commands: Record<string, string | string[]>): Promise<void> {
+  const { env } = process;
+  const concurrentCommands: ConcurrentlyCommandInput[] = [];
+
+  for (const [name, command] of Object.entries(commands)) {
+    const cmd = Array.isArray(command) ? command.join(" && ") : command;
+
+    concurrentCommands.push({ name, command: cmd, env });
+  }
+
+  await concurrently(concurrentCommands, {
+    handleInput: true,
+    prefixColors: "auto",
+    killOthers: "failure",
+  })
+    .result.then(() => {})
+    .catch(() => {});
 }
 
 export function npx(command: string): void {
-  shell(`npx --yes ${command}`);
+  execSingly(`npx --yes ${command}`);
 }
 
-export const pkg = (() => {
-  const pkgPath = new URL("../package.json", import.meta.url);
-
-  return JSON.parse(fs.readFileSync(pkgPath, "utf-8")) as {
-    name: string;
-    version: string;
-    description: string;
-  };
-})();
+export function readJsonSync(filePath: string): JsonValue {
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
