@@ -25,7 +25,7 @@ export function defineConfig(options: Options, ...configs: Linter.Config[]): Ret
   const restConfigs: TypedFlatConfigItem[] = configs || [];
 
   if (!formatters) {
-    restConfigs.push(prettier);
+    restConfigs.push(prettier, { rules: { "antfu/consistent-chaining": "off" } });
   }
 
   return antfu({
