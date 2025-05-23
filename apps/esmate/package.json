@@ -11,6 +11,7 @@
     }
   },
   "bin": {
+    "esm": "./dist/index.js",
     "esmate": "./dist/index.js"
   },
   "files": [
