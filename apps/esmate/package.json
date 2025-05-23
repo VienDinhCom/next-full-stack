@@ -2,6 +2,7 @@
   "name": "esmate",
   "type": "module",
   "version": "0.0.10",
+  "description": "Uncomplicate JavaScript",
   "license": "MIT",
   "exports": {
     "./*": {
@@ -18,21 +19,26 @@
   "scripts": {
     "watch": "rslib build --watch",
     "build": "rslib build",
-    "prepack": "rslib build",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "prepack": "npm run build",
+    "check": "tsc && prettier --check . && eslint .",
+    "fix": "prettier --write . && eslint --fix .",
+    "start": "tsx src/index.ts"
   },
   "dependencies": {
     "@esmate/eslint": "workspace:*",
     "@esmate/prettier": "workspace:*",
     "citty": "^0.1.6",
+    "concurrently": "^9.1.2",
     "consola": "^3.4.2",
+    "es-toolkit": "^1.35.0",
+    "find-up": "^7.0.0",
     "nypm": "^0.6.0"
   },
   "devDependencies": {
     "@rslib/core": "^0.7.1",
     "@types/node": "^22.8.1",
     "tsx": "^4.19.4",
+    "type-fest": "^4.41.0",
     "typescript": "^5.8.3"
   },
   "publishConfig": {

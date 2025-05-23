@@ -8,10 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "esmate lint",
-    "lint:fix": "esmate lint --fix",
-    "format": "esmate fmt",
-    "format:check": "esmate fmt --check",
+    "fix": "esmate task fix",
+    "check": "esmate task check",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -40,5 +38,16 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3"
+  },
+  "tasks": {
+    "fix": [
+      "esmate fmt",
+      "esmate lint --fix"
+    ],
+    "check": [
+      "astro check",
+      "esmate fmt --check",
+      "esmate lint"
+    ]
   }
 }
