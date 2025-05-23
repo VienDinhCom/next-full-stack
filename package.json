@@ -7,9 +7,11 @@
     "dev": "turbo run --filter='./packages/*' dev",
     "build": "turbo run --filter='./packages/*' build",
     "fix": "turbo run fix",
-    "check": "turbo run check"
+    "check": "turbo run check",
+    "release": "changeset version && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "turbo": "^2.5.3"
   },
   "packageManager": "pnpm@9.0.0",
