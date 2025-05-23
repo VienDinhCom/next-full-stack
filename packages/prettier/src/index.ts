@@ -65,20 +65,20 @@ export function defineConfig(options: Options, config?: Config): Config {
 
   if (options?.astro) {
     plugins.push(importPlugin("astro"));
-    configs.push(options.astro === true ? {} : options.astro as Config);
+    configs.push(options.astro === true ? {} : (options.astro as Config));
     overrides.push({ files: "*.astro", options: { parser: "astro" } });
   }
 
   if (options?.svelte) {
     plugins.push(importPlugin("svelte"));
-    configs.push(options.svelte === true ? {} : options.svelte as Config);
+    configs.push(options.svelte === true ? {} : (options.svelte as Config));
     overrides.push({ files: "*.svelte", options: { parser: "svelte" } });
   }
 
   // Must com last to avoid conflicts with other plugins
   if (options?.tailwind) {
     plugins.push(importPlugin("tailwind"));
-    configs.push(options.tailwind === true ? {} : options.tailwind as Config);
+    configs.push(options.tailwind === true ? {} : (options.tailwind as Config));
   }
 
   return {

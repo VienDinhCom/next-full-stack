@@ -25,36 +25,42 @@ export function defineConfig(options: Options, ...configs: Linter.Config[]): Ret
   const restConfigs: TypedFlatConfigItem[] = configs || [];
 
   if (!formatters) {
-    restConfigs.push(prettier, { rules: { "antfu/consistent-chaining": "off" } });
+    restConfigs.push(prettier, {
+      rules: { "antfu/consistent-chaining": "off" },
+    });
   }
 
-  return antfu({
-    stylistic: {
-      indent: 2,
-      semi: true,
-      quotes: "double",
+  return antfu(
+    {
+      stylistic: {
+        indent: 2,
+        semi: true,
+        quotes: "double",
+      },
+      ...restOptions,
     },
-    ...restOptions,
-  }, {
-    rules: {
-      "no-console": ["warn"],
-      "node/no-process-env": ["error"],
-      "antfu/no-top-level-await": ["off"],
-      "perfectionist/sort-imports": [
-        "error",
-        {
-          tsconfigRootDir: ".",
-        },
-      ],
-      "unicorn/filename-case": [
-        "error",
-        {
-          case: "kebabCase",
-          ignore: ["README.md"],
-        },
-      ],
+    {
+      rules: {
+        "no-console": ["warn"],
+        "node/no-process-env": ["error"],
+        "antfu/no-top-level-await": ["off"],
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            tsconfigRootDir: ".",
+          },
+        ],
+        "unicorn/filename-case": [
+          "error",
+          {
+            case: "kebabCase",
+            ignore: ["README.md"],
+          },
+        ],
+      },
     },
-  }, ...restConfigs);
+    ...restConfigs,
+  );
 }
 
 // https://github.com/w3cj/hono-open-api-starter/tree/main
