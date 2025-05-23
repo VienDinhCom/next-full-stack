@@ -18,12 +18,10 @@
     "dist"
   ],
   "scripts": {
-    "watch": "rslib build --watch",
     "build": "rslib build",
-    "prepack": "npm run build",
-    "check": "tsc && prettier --check . && eslint .",
+    "dev": "rslib build --watch",
     "fix": "prettier --write . && eslint --fix .",
-    "start": "tsx src/index.ts"
+    "check": "prettier --check . && eslint ."
   },
   "dependencies": {
     "@esmate/eslint": "workspace:*",

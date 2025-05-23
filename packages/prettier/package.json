@@ -15,13 +15,9 @@
   ],
   "scripts": {
     "build": "rslib build",
-    "watch": "rslib build --watch",
-    "prepack": "rslib build",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
-  },
-  "peerDependencies": {
-    "prettier": "^3.5.3"
+    "dev": "rslib build --watch",
+    "fix": "prettier --write . && eslint --fix .",
+    "check": "tsc && prettier --check . && eslint ."
   },
   "dependencies": {
     "make-synchronized": "^0.7.2",
@@ -32,6 +28,8 @@
   "devDependencies": {
     "@rslib/core": "^0.7.1",
     "@types/node": "^22.8.1",
+    "eslint": "^9.27.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   },
   "publishConfig": {

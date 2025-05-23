@@ -4,17 +4,13 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "watch": "turbo run watch",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "dev": "turbo run --filter='./packages/*' dev",
+    "build": "turbo run --filter='./packages/*' build",
+    "fix": "turbo run fix",
+    "check": "turbo run check"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "turbo": "^2.5.3",
-    "typescript": "5.8.2"
+    "turbo": "^2.5.3"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

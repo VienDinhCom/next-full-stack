@@ -15,15 +15,9 @@
   ],
   "scripts": {
     "build": "rslib build",
-    "watch": "rslib build --watch",
-    "prepack": "rslib build",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
-  },
-  "peerDependencies": {
-    "eslint": "^9.26.0",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-slidev": "^1.0.5"
+    "dev": "rslib build --watch",
+    "fix": "prettier --write . && eslint --fix .",
+    "check": "tsc && prettier --check . && eslint ."
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.13.1",
@@ -42,6 +36,8 @@
   "devDependencies": {
     "@rslib/core": "^0.7.1",
     "@types/node": "^22.8.1",
+    "eslint": "^9.26.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   },
   "publishConfig": {
