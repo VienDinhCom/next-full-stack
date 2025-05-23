@@ -54,12 +54,24 @@ importers:
       citty:
         specifier: ^0.1.6
         version: 0.1.6
+      concurrently:
+        specifier: ^9.1.2
+        version: 9.1.2
       consola:
         specifier: ^3.4.2
         version: 3.4.2
+      es-toolkit:
+        specifier: ^1.35.0
+        version: 1.38.0
+      find-up:
+        specifier: ^7.0.0
+        version: 7.0.0
       nypm:
         specifier: ^0.6.0
         version: 0.6.0
+      type-fest:
+        specifier: ^4.41.0
+        version: 4.41.0
     devDependencies:
       '@rslib/core':
         specifier: ^0.7.1
