@@ -39,8 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Release GitHub
-        uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
+      - run: npx changelogithub # or changelogithub@0.12 to ensure a stable result
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
