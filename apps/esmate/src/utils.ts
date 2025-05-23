@@ -1,5 +1,5 @@
 import type { ConcurrentlyCommandInput } from "concurrently";
-import type {JsonValue} from 'type-fest';
+import type { JsonValue } from "type-fest";
 
 import concurrently from "concurrently";
 import { spawnSync } from "node:child_process";

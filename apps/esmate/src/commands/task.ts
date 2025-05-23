@@ -20,6 +20,12 @@ export const task = defineCommand({
   async run({ args }) {
     try {
       const task = pkg.tasks[args.task];
+
+      if (!task) {
+        consola.error(`Task "${args.task}" not found in package.json`);
+        return;
+      }
+
       const isParallel = isJSONObject(task);
 
       if (isParallel) {
