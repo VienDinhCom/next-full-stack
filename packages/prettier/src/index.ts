@@ -6,17 +6,17 @@ import { importPlugin } from "./utils";
 
 interface Options {
   /**
-   * Enable Astro support.
-   *
-   * http://npm.im/prettier-plugin-astro
-   */
-  astro?: boolean | AstroOptions;
-  /**
    * Ignores files from formatting.
    *
    * So you don't have to use .prettierignore file.
    */
   ignores?: string[];
+  /**
+   * Enable Astro support.
+   *
+   * http://npm.im/prettier-plugin-astro
+   */
+  astro?: boolean | AstroOptions;
   /**
    * Enable Svelte support.
    *
@@ -31,7 +31,7 @@ interface Options {
   tailwind?: boolean | TailwindOptions;
 }
 
-export function defineConfig(options?: Options, config?: Config): Config {
+export function defineConfig(options: Options, config?: Config): Config {
   const defaultConfig: Config = {
     semi: true,
     tabWidth: 2,
