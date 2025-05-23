@@ -1,0 +1,30 @@
+name: Pull Requests
+
+on: [pull_request]
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Pull Requests
+    if: github.repository == 'VienDinhCom/esmate'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install, Build and Check  
+        run: pnpm install
+        run: pnpm run build
+        run: pnpm run check
