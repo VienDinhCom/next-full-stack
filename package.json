@@ -1,7 +1,8 @@
 {
   "name": "esmate",
-  "version": "0.0.0",
   "type": "module",
+  "version": "1.0.0",
+  "description": "Uncomplicate JavaScript",
   "private": true,
   "scripts": {
     "fix": "turbo run fix",

@@ -1,9 +1,13 @@
 {
   "name": "esmate",
   "type": "module",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Uncomplicate JavaScript",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viendinhcom/esmate.git"
+  },
   "exports": {
     "./*": {
       "types": "./dist/exports/*.d.ts",

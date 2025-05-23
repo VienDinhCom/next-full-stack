@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viendinhcom/esmate.git"
+  },
   "bin": {
     "create-deves": "./cli.ts"
   },

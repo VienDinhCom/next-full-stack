@@ -1,8 +1,12 @@
 {
   "name": "@esmate/eslint",
   "type": "module",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viendinhcom/esmate.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -39,8 +43,5 @@
     "eslint": "^9.26.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -1,8 +1,12 @@
 {
   "name": "@esmate/prettier",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viendinhcom/esmate.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
