@@ -1,7 +1,7 @@
 {
   "name": "@esmate/shadcn",
   "description": "Shadcn components, hooks, and styles in one package.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -12,6 +12,10 @@
     "./ui/*": {
       "import": "./dist/ui/*.js",
       "types": "./dist/ui/*.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/ui/*.js",
+      "types": "./dist/components/*.d.ts"
     },
     "./hooks/*": {
       "import": "./dist/hooks/*.js",
