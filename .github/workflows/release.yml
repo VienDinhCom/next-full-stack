@@ -27,8 +27,10 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: pnpm-lock.yaml
 
-      - name: Install dependencies
+      - name: Build & Check 
         run: pnpm install
+        run: pnpm run build 
+        run: pnpm run check 
 
       - name: Release
         id: changesets
