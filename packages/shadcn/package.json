@@ -1,6 +1,7 @@
 {
   "name": "@esmate/shadcn",
-  "version": "0.0.2",
+  "description": "Shadcn components, hooks, and styles in one package.",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -8,9 +9,13 @@
     "url": "git+https://github.com/viendinhcom/esmate.git"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+    "./ui/*": {
+      "import": "./dist/ui/*.js",
+      "types": "./dist/ui/*.d.ts"
+    },
+    "./hooks/*": {
+      "import": "./dist/hooks/*.js",
+      "types": "./dist/hooks/*.d.ts"
     },
     "./styles/*.css": {
       "style": "./dist/styles/*.css"
@@ -18,10 +23,6 @@
     "./*": {
       "import": "./dist/lib/*.js",
       "types": "./dist/lib/*.d.ts"
-    },
-    "./hook-form/*": {
-      "import": "./dist/lib/hook-form/*.js",
-      "types": "./dist/lib/hook-form/*.d.ts"
     }
   },
   "scripts": {
@@ -60,7 +61,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
-    "date-fns": "^4.1.0",
+    "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.511.0",
@@ -78,19 +79,24 @@
   "devDependencies": {
     "@rslib/core": "^0.7.1",
     "@types/node": "^22.15.19",
+    "@types/react": "^19.0.0",
     "globby": "^14.1.0",
     "shadcn": "^2.5.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
-  "peerDependencies": {
-    "@types/react": "^19.1.4",
-    "react": "^19.1.0"
-  },
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  }
+  "keywords": [
+    "esmate",
+    "shadcn",
+    "components",
+    "hooks",
+    "styles",
+    "ui",
+    "react",
+    "tailwindcss",
+    "typescript"
+  ]
 }

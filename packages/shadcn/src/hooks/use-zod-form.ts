@@ -4,8 +4,7 @@ import z, { ZodSchema } from "zod";
 
 export type ZodFormValues<S extends ZodSchema> = z.infer<S>;
 
-interface Props<S extends ZodSchema>
-  extends Omit<UseFormProps<ZodFormValues<S>>, "resolver"> {
+interface Props<S extends ZodSchema> extends Omit<UseFormProps<ZodFormValues<S>>, "resolver"> {
   schema: S;
 }
 
