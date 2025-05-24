@@ -34,8 +34,6 @@ Start using components:
 
 ```tsx
 import { Button } from "@esmate/shadcn/ui/button";
-
-// ...use <Button> in your app!
 ```
 
 ## Usage
@@ -48,6 +46,14 @@ All Shadcn [UI components](https://ui.shadcn.com/docs/components/) are available
 import { Button } from "@esmate/shadcn/ui/button";
 
 import { Card, CardContent } from "@esmate/shadcn/ui/card";
+```
+
+### Utils
+
+All Shadcn utils are available via `@esmate/shadcn/utils` imports.
+
+```typescript
+import { cn } from "@esmate/shadcn/utils";
 ```
 
 ### Hooks
@@ -229,3 +235,16 @@ If you want to create your own styles, the package includes a base style that's 
 
 To create themes, check out [Shadcn Themes](https://ui.shadcn.com/themes) or [Tweakcn Themes](https://tweakcn.com/) for
 easy theme generation.
+
+### Exports
+
+Shadcn comes with many dependencies, which can be complicated to manage and use in a project. That's why I created this
+package: to bundle them all together. To make them reusable and avoid reinstalling them, I re-export them for you.
+
+```typescript
+import { z } from "@esmate/shadcn/zod";
+import { useForm } from "@esmate/shadcn/react-hook-form";
+import { useForm } from "@esmate/shadcn/hookform__resolvers";
+
+// You can check src/lib or dist/lib to find more modules
+```
