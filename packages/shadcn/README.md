@@ -242,9 +242,9 @@ Shadcn comes with many dependencies, which can be complicated to manage and use 
 package: to bundle them all together. To make them reusable and avoid reinstalling them, I re-export them for you.
 
 ```typescript
-import { z } from "@esmate/shadcn/zod";
 import { useForm } from "@esmate/shadcn/react-hook-form";
-import { useForm } from "@esmate/shadcn/hookform__resolvers";
+import { zodResolver } from "@esmate/shadcn/hookform__resolvers";
+import { z } from "@esmate/shadcn/zod";
 
 // You can check src/lib or dist/lib to find more modules
 ```
