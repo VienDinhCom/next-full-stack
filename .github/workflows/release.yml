@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -28,10 +27,11 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: pnpm-lock.yaml
 
-      - name: Build & Check 
+      - name: Install Dependencies
         run: pnpm install
-        run: pnpm run build 
-        run: pnpm run check 
+
+      - name: Build and Check
+        run: pnpm run build && pnpm run check
 
       - name: Release
         id: changesets
