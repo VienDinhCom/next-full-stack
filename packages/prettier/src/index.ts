@@ -75,7 +75,7 @@ export function defineConfig(options: Options, config?: Config): Config {
     overrides.push({ files: "*.svelte", options: { parser: "svelte" } });
   }
 
-  // Must com last to avoid conflicts with other plugins
+  // Must come last to avoid conflicts with other plugins
   if (options?.tailwind) {
     plugins.push(importPlugin("tailwind"));
     configs.push(options.tailwind === true ? {} : (options.tailwind as Config));
