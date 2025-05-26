@@ -2,10 +2,12 @@
 
 Supercharge your UI development with Shadcn—components, hooks, and styles all in one package.
 
-- **Zero config pain**: Works out of the box with Tailwind.
-- **Pre-styled**: Comes with `base.css`, `new-york.css`, etc.
-- **Complete UI**: Composable components, no boilerplate needed.
-- **Smart hooks**: Built-in logic that saves you time.
+- 🔧 **Zero Config**: Works out of the box with Tailwind and pre-styled themes like `new-york.css`.
+- 🧩 **Ready-to-Use UI**: Composable Shadcn components via `@esmate/shadcn/ui/*`, no boilerplate needed.
+- ⚙️ **Built-in Hooks**: Includes smart hooks like `useIsMobile` and `useZodForm` for fast logic handling.
+- 🛠 **Useful Utilities**: Handy functions like `cn` for class merging, all in one place.
+- 🎨 **Customizable Styles**: Easy theming with design tokens, dark mode, and editable base styles.
+- 📦 **Bundled Deps**: Re-exports `zod`, `react-hook-form`, and more—no extra installs needed.
 
 ## Installation
 
@@ -238,8 +240,9 @@ easy theme generation.
 
 ### Exports
 
-Shadcn comes with many dependencies, which can be complicated to manage and use in a project. That's why I created this
-package: to bundle them all together. To make them reusable and avoid reinstalling them, I re-export them for you.
+Shadcn includes many dependencies that can be tricky to manage in a project. That’s why I created this package: to
+bundle them all in one place. I’ve re-exported everything for you, making the dependencies reusable and saving you from
+having to install each dependency individually.
 
 ```typescript
 import { useForm } from "@esmate/shadcn/react-hook-form";
