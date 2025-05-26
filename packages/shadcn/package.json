@@ -1,7 +1,7 @@
 {
   "name": "@esmate/shadcn",
   "description": "Shadcn components, hooks, and styles in one package.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "type": "module",
   "repository": {
