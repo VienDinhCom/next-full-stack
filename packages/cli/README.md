@@ -12,7 +12,7 @@ linting, and running custom task sequences.
 
 ## Usage
 
-### 🧼 Format Code
+### Format Code
 
 Run Prettier to check formatting:
 
@@ -26,7 +26,7 @@ Automatically fix formatting issues:
 esmate fmt --fix
 ```
 
-### 🔍 Lint Code
+### Lint Code
 
 Run ESLint to check for code issues:
 
@@ -40,11 +40,11 @@ Automatically fix linting issues:
 esmate lint --fix
 ```
 
-## 📋 Task Runner
+### Task Runner
 
 Tasks are defined in your `package.json` under a `tasks` field.
 
-### ▶️ Series (Sequential Execution)
+#### ▶️ Series (Sequential Execution)
 
 Run tasks in order, one after another.
 
@@ -68,7 +68,7 @@ Run tasks in order, one after another.
 }
 ```
 
-### 🔀 Parallel Execution
+#### 🔀 Parallel Execution
 
 Run multiple tasks at the same time.
 
