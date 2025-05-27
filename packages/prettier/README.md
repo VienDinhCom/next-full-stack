@@ -19,7 +19,7 @@ npm install -D prettier
 Define your Prettier configuration in a `prettier.config.js` file:
 
 ```ts
-import { defineConfig } from "esmate/prettier";
+import { defineConfig } from "@esmate/prettier";
 
 export default defineConfig({
   // astro: true
