@@ -26,6 +26,9 @@ export default defineConfig({
 });
 ```
 
+Check out [@esmate/prettier](https://www.npmjs.com/package/@esmate/prettier) to see all available options for Tailwind,
+React, Vue, Astro, Svelte, and more.
+
 Run Prettier to format your code:
 
 ```bash
@@ -51,6 +54,9 @@ export default defineConfig({
   ignores: [],
 });
 ```
+
+Check out [@esmate/eslint](https://www.npmjs.com/package/@esmate/eslint) to see all available options for Tailwind,
+React, Vue, Astro, Svelte, and more.
 
 Run ESLint to check for code issues:
 
