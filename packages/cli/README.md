@@ -13,6 +13,12 @@ with Deno, you will be happy with esmate.
 
 ### Format Code
 
+First, you need to install Prettier:
+
+```bash
+npm install -D prettier
+```
+
 Define your Prettier configuration in a `prettier.config.js` file:
 
 ```ts
@@ -43,6 +49,12 @@ esmate fmt
 ```
 
 ### Lint Code
+
+First, you need to install ESLint:
+
+```bash
+npm install -D eslint
+```
 
 Define your ESLint configuration in a `eslintrc.config.js` file:
 
