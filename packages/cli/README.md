@@ -30,16 +30,16 @@ export default defineConfig({
 Check out [@esmate/prettier](https://www.npmjs.com/package/@esmate/prettier) to see all available options for Tailwind,
 React, Vue, Astro, Svelte, and more.
 
-Run Prettier to format your code:
+Run Prettier to check your code:
 
 ```bash
-esmate fmt
+esmate fmt --check
 ```
 
 Automatically fix formatting issues:
 
 ```bash
-esmate fmt --fix
+esmate fmt
 ```
 
 ### Lint Code
