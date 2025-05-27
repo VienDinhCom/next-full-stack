@@ -3,8 +3,6 @@
 `esmate` is a lightweight CLI tool designed to simplify common JavaScript/TypeScript project tasks like formatting,
 linting, and running custom task sequences.
 
-## Features
-
 - 🧹 Lint with ESLint
 - 🔧 Format code with Prettier
 - 🛠️ Define and run custom task sequences (series and parallel)
@@ -14,7 +12,21 @@ linting, and running custom task sequences.
 
 ### Format Code
 
-Run Prettier to check formatting:
+Define your Prettier configuration in a `prettier.config.js` file:
+
+```ts
+import { defineConfig } from "esmate/prettier";
+
+export default defineConfig({
+  tailwind: {
+    tailwindFunctions: ["cn"],
+    tailwindStylesheet: "src/global.css",
+  },
+  ignores: [],
+});
+```
+
+Run Prettier to format your code:
 
 ```bash
 esmate fmt
@@ -27,6 +39,18 @@ esmate fmt --fix
 ```
 
 ### Lint Code
+
+Define your ESLint configuration in a `eslintrc.config.js` file:
+
+```ts
+import { defineConfig } from "esmate/eslint";
+
+export default defineConfig({
+  type: "app",
+  react: true,
+  ignores: [],
+});
+```
 
 Run ESLint to check for code issues:
 
@@ -44,7 +68,7 @@ esmate lint --fix
 
 Tasks are defined in your `package.json` under a `tasks` field.
 
-#### ▶️ Series (Sequential Execution)
+#### ▶️ Sequential Execution
 
 Run tasks in order, one after another.
 
