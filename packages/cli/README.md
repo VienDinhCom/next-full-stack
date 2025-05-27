@@ -1,11 +1,12 @@
 # esmate
 
-`esmate` is a lightweight CLI tool designed to simplify common JavaScript/TypeScript project tasks like formatting,
-linting, and running custom task sequences.
+[esmate](https://github.com/viendinhcom/esmate) is a lightweight CLI tool designed to simplify common
+JavaScript/TypeScript project tasks like formatting, linting, and running custom task sequences. If you are familiar
+with Deno, you will be happy with esmate.
 
 - 🧹 Lint with ESLint
 - 🔧 Format code with Prettier
-- 🛠️ Define and run custom task sequences (series and parallel)
+- 🛠️ Define and run custom tasks (series and parallel)
 - ⚡ Fast and minimal configuration
 
 ## Usage
