@@ -8,17 +8,14 @@ Prettier configuration for humans with support for React, Vue, Svelte, Astro, Ta
 npm install -D @esmate/prettier prettier
 ```
 
-If you are using [ESMate CLI](https://www.npmjs.com/package/esmate), it's built-in, so only need to install `prettier`:
-
-```bash
-npm install -D prettier
-```
+If you are using [ESMate CLI](https://www.npmjs.com/package/esmate), it's built-in, so only need to install `prettier`.
 
 ## Usage
 
 Define your Prettier configuration in a `prettier.config.js` file:
 
 ```ts
+// @ts-check
 import { defineConfig } from "@esmate/prettier";
 
 export default defineConfig({
@@ -36,11 +33,11 @@ export default defineConfig({
 Run Prettier to check your code:
 
 ```bash
-prettier --check
+prettier --check .
 ```
 
 Automatically fix formatting issues:
 
 ```bash
-prettier --write
+prettier --write .
 ```
