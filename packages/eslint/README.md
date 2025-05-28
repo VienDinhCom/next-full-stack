@@ -26,7 +26,7 @@ export default defineConfig({
 ```
 
 Check out [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config) to see all available options for
-Tailwind, React, Vue, Astro, Svelte, and more.
+React, Vue, Astro, Svelte, and more.
 
 Run ESLint to check your code:
 
