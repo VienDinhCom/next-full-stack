@@ -9,6 +9,12 @@ with Deno, you will be happy with esmate.
 - 🛠️ Define and run custom tasks (series and parallel)
 - ⚡ Fast and minimal configuration
 
+## Installation
+
+```bash
+npm install -D esmate
+```
+
 ## Usage
 
 ### Format Code
@@ -120,7 +126,7 @@ Run multiple tasks at the same time.
 ```json
 {
   "tasks": {
-    "build": {
+    "dev": {
       "scripts": "tsc --watch",
       "styles": "sass --watch input.scss output.css"
     }
