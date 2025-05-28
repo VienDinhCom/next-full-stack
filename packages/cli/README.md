@@ -22,6 +22,7 @@ npm install -D prettier
 Define your Prettier configuration in a `prettier.config.js` file:
 
 ```ts
+// @ts-check
 import { defineConfig } from "esmate/prettier";
 
 export default defineConfig({
@@ -59,6 +60,7 @@ npm install -D eslint
 Define your ESLint configuration in a `eslintrc.config.js` file:
 
 ```ts
+// @ts-check
 import { defineConfig } from "esmate/eslint";
 
 export default defineConfig({

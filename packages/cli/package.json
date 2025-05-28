@@ -36,7 +36,7 @@
     "build": "rslib build",
     "dev": "rslib build --watch",
     "fix": "prettier --write . && eslint --fix .",
-    "check": "prettier --check . && eslint ."
+    "check": "tsc && prettier --check . && eslint ."
   },
   "dependencies": {
     "@esmate/eslint": "workspace:*",
