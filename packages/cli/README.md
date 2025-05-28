@@ -70,8 +70,8 @@ export default defineConfig({
 });
 ```
 
-Check out [@esmate/eslint](https://www.npmjs.com/package/@esmate/eslint) to see all available options for Tailwind,
-React, Vue, Astro, Svelte, and more.
+Check out [@esmate/eslint](https://www.npmjs.com/package/@esmate/eslint) to see all available options for React, Vue,
+Astro, Svelte, and more.
 
 Run ESLint to check for code issues:
 
