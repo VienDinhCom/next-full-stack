@@ -1,12 +1,22 @@
 {
   "name": "@esmate/eslint",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viendinhcom/esmate.git"
   },
+  "keywords": [
+    "esmate",
+    "eslint",
+    "configuration",
+    "prettier",
+    "typescript",
+    "astro",
+    "svelte",
+    "react"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

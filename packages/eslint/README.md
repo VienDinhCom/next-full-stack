@@ -25,6 +25,10 @@ export default defineConfig({
 });
 ```
 
+[@esmate/eslint](https://www.npmjs.com/package/@esmate/eslint) is a wrapper around **@antfu/eslint-config** with
+customizations to ensure compatibility with [@esmate/prettier](https://www.npmjs.com/package/@esmate/prettier) by
+default.
+
 Check out [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config) to see all available options for
 React, Vue, Astro, Svelte, and more.
 
