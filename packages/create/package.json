@@ -1,24 +1,62 @@
 {
   "name": "create-esmate",
-  "version": "0.0.0",
-  "license": "MIT",
   "type": "module",
+  "version": "1.0.0",
+  "description": "Create ESMate Applications",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viendinhcom/esmate.git"
   },
+  "keywords": [
+    "esmate",
+    "cli",
+    "node",
+    "javascript",
+    "typescript",
+    "eslint",
+    "prettier",
+    "toolkit",
+    "utility"
+  ],
+  "exports": {
+    "./*": {
+      "types": "./dist/exports/*.d.ts",
+      "import": "./dist/exports/*.js"
+    }
+  },
   "bin": {
-    "create-deves": "./cli.ts"
+    "esm": "./dist/index.js",
+    "esmate": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esmate task build",
+    "dev": "esmate task dev",
+    "fix": "esmate task fix",
+    "check": "esmate task check"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.4.1",
-    "@types/fs-extra": "^11.0.4",
-    "commander": "^13.1.0",
-    "es-toolkit": "^1.35.0",
-    "fs-extra": "^11.3.0",
-    "globby": "^14.1.0"
+    "citty": "^0.1.6",
+    "consola": "^3.4.2",
+    "giget": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.1"
+    "@rslib/core": "^0.7.1",
+    "@types/node": "^22.8.1",
+    "eslint": "^9.27.0",
+    "esmate": "workspace:*",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "type-fest": "^4.41.0",
+    "typescript": "^5.8.3"
+  },
+  "tasks": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "check": "tsc && esmate lint && esmate fmt --check",
+    "fix": "esmate lint --fix && esmate fmt"
   }
 }
