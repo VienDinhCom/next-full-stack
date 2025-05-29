@@ -50,7 +50,7 @@ const main = defineCommand({
       const packageJsonPath = path.join(name, "package.json");
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
-      fs.writeFileSync(packageJsonPath, JSON.stringify({ name, ...omit(packageJson, ["name"]) }));
+      fs.writeFileSync(packageJsonPath, JSON.stringify({ name, ...omit(packageJson, ["name"]) }, null, 2));
     } catch (error) {
       consola.error(error);
     }
