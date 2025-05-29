@@ -1,6 +1,7 @@
 {
   "name": "@esmate/eslint",
   "type": "module",
+  "description": "ESLint configuration for humans.",
   "version": "1.0.3",
   "license": "MIT",
   "repository": {
