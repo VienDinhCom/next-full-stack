@@ -1,7 +1,7 @@
 {
   "name": "create-esmate",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create ESMate Applications",
   "license": "MIT",
   "repository": {
@@ -41,6 +41,7 @@
   "dependencies": {
     "citty": "^0.1.6",
     "consola": "^3.4.2",
+    "es-toolkit": "^1.35.0",
     "giget": "^2.0.0"
   },
   "devDependencies": {
