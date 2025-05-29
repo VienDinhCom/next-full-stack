@@ -1,6 +1,6 @@
 # create-esmate
 
-Easily scaffold modern web applications using [ESMate CLI](https://github.com/VienDinhCom/esmate) with built-in
+Easily scaffold modern web applications using [ESMate CLI](https://www.npmjs.com/package/esmate) with built-in
 configurations for popular frameworks like **React**, **Vue**, **Solid**, **Svelte**, **Next.js**, **Astro**, and more.
 
 ## 🚀 Quick Start
@@ -51,3 +51,8 @@ bun create esmate my-app --template react-spa
 ```
 
 Use `.` as the project name to scaffold in the current directory.
+
+## 📦 Available Templates
+
+Browse all available templates on the
+[ESMate GitHub repository](https://github.com/VienDinhCom/esmate/tree/main/templates).
