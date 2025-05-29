@@ -47,7 +47,7 @@
     "@rslib/core": "^0.7.1",
     "@types/node": "^22.8.1",
     "eslint": "^9.27.0",
-    "esmate": "workspace:*",
+    "esmate": "^1.0.10",
     "prettier": "^3.5.3",
     "tsx": "^4.19.4",
     "type-fest": "^4.41.0",
