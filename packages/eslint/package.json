@@ -1,8 +1,8 @@
 {
   "name": "@esmate/eslint",
   "type": "module",
-  "description": "ESLint configuration for humans.",
   "version": "1.0.3",
+  "description": "ESLint configuration for humans.",
   "license": "MIT",
   "repository": {
     "type": "git",
