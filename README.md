@@ -2,6 +2,12 @@
 
 Tools & Templates for Fullstack Development with Node.js, React, Astro, Next.js, Hono, and more.
 
+## Get Started
+
+```bash
+npx create-esmate
+```
+
 ## Packages
 
 - [**esmate**](/packages/cli) — A CLI inspired by Deno to simplify modern JavaScript development.
