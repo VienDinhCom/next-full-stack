@@ -1,6 +1,6 @@
 # ESMate React
 
-This project was bootstrapped with [ESMate](https://github.com/viendinhcom/esmate), and: 
+This project was bootstrapped with [ESMate](https://github.com/viendinhcom/esmate), and:
 
 - [React Router](https://reactrouter.com)
 - [File-based Routing](https://reactrouter.com/how-to/file-route-conventions)
