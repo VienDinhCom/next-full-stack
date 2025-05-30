@@ -1,5 +1,5 @@
-import { useZodForm } from "@esmate/shadcn/hooks";
-import { Button } from "@esmate/shadcn/ui";
+import { useZodForm } from "@esmate/shadcn/hooks/use-zod-form";
+import { Button } from "@esmate/shadcn/ui/button";
 import { z } from "astro:schema";
 
 import { authClient } from "@src/shared/auth";
