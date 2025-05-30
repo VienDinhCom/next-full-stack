@@ -95,7 +95,7 @@ esmate lint --fix
 
 Tasks are defined in your `package.json` under a `tasks` field.
 
-#### ▶️ Sequential Execution
+#### Sequential Execution
 
 Run tasks in order, one after another.
 
@@ -119,7 +119,13 @@ Run tasks in order, one after another.
 }
 ```
 
-#### 🔀 Parallel Execution
+Run the task:
+
+```bash
+esmate task build
+```
+
+#### Parallel Execution
 
 Run multiple tasks at the same time.
 
@@ -132,4 +138,10 @@ Run multiple tasks at the same time.
     }
   }
 }
+```
+
+Run the task:
+
+```bash
+esmate task dev
 ```
