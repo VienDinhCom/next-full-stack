@@ -42,7 +42,7 @@ const main = defineCommand({
         await downloadTemplate(`github:VienDinhCom/esmate/templates/${template}`, { dir: name });
       } else {
         template = await consola.prompt("Select a template: ", { type: "select", options: templates });
-        name = await consola.prompt("Name your project: ", { type: "text" });
+        name = await consola.prompt("Name your project: ", { type: "text", default: template });
 
         await downloadTemplate(`github:VienDinhCom/esmate/templates/${template}`, { dir: name });
       }
