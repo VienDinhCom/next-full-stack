@@ -1,42 +1,43 @@
 {
-  "name": "deves-react-spa",
+  "name": "esmate-react-spa",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
-  "deves": "react",
   "scripts": {
-    "dev": "deves task dev",
-    "build": "deves task build",
-    "start": "deves task start",
-    "check": "deves task check",
-    "fix": "deves task fix"
+    "dev": "esmate task dev",
+    "build": "esmate task build",
+    "start": "esmate task start",
+    "check": "esmate task check",
+    "fix": "esmate task fix"
   },
   "dependencies": {
-    "@react-router/fs-routes": "^7.5.0",
-    "@react-router/node": "^7.5.0",
-    "isbot": "^5.1.26",
+    "@esmate/shadcn": "^1.1.2",
+    "@react-router/fs-routes": "^7.6.1",
+    "@react-router/node": "^7.6.1",
+    "isbot": "^5.1.28",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.5.0"
+    "react-router": "^7.6.1"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.5.0",
-    "@tailwindcss/vite": "^4.1.4",
-    "@types/node": "^20",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "deves": "^1.0.27",
-    "eslint": "^9.24.0",
+    "@react-router/dev": "^7.6.1",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/node": "^22.15.27",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.27.0",
+    "esmate": "^1.0.11",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4.1.4",
+    "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3",
-    "vite": "^6.3.1"
+    "vite": "^6.3.5",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "tasks": {
     "dev": "react-router dev",
-    "build": "react-router typegen && tsc --noEmit && react-router build",
+    "build": "react-router typegen && react-router build",
     "start": "vite preview --port 3000",
-    "check": "deves lint && deves fmt --check",
-    "fix": "deves lint --fix && deves fmt"
+    "check": "tsc && esmate lint && esmate fmt --check",
+    "fix": "esmate lint --fix && esmate fmt"
   }
 }

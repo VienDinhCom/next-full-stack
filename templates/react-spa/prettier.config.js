@@ -1,5 +1,10 @@
-import { defineConfig, globalIgnores } from "deves/prettier";
+// @ts-check
+import { defineConfig } from "esmate/prettier";
 
-export default defineConfig(
-  globalIgnores(["package-lock.json", "pnpm-lock.yaml"]),
-);
+export default defineConfig({
+  tailwind: {
+    tailwindFunctions: ["cn"],
+    tailwindStylesheet: "src/root.css",
+  },
+  ignores: [],
+});

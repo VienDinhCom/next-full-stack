@@ -1,8 +1,8 @@
-import { defineConfig, node, prettier, react } from "deves/eslint";
+// @ts-check
+import { defineConfig } from "esmate/eslint";
 
-export default defineConfig(
-  node(),
-  react(),
-  prettier({ tailwindFunctions: ["cn"] }),
-  // globalIgnores(["./example.ts"]),
-);
+export default defineConfig({
+  type: "app",
+  react: true,
+  ignores: [],
+});
