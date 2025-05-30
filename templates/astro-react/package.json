@@ -1,8 +1,9 @@
 {
   "name": "astro-react",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/viendinhcom/esmate",
   "scripts": {
     "dev": "esmate task dev",
     "build": "esmate task build",

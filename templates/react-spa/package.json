@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/viendinhcom/esmate",
   "scripts": {
     "dev": "esmate task dev",
     "build": "esmate task build",
@@ -35,9 +36,19 @@
   },
   "tasks": {
     "dev": "react-router dev",
-    "build": "react-router typegen && react-router build",
+    "build": [
+      "react-router typegen",
+      "react-router build"
+    ],
     "start": "vite preview --port 3000",
-    "check": "tsc && esmate lint && esmate fmt --check",
-    "fix": "esmate lint --fix && esmate fmt"
+    "fix": [
+      "esmate fmt",
+      "esmate lint --fix"
+    ],
+    "check": [
+      "astro check",
+      "esmate fmt --check",
+      "esmate lint"
+    ]
   }
 }
