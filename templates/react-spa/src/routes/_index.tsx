@@ -1,33 +1,36 @@
+import { Button } from "@esmate/shadcn/ui/button";
 import logo from "@src/assets/react.svg";
 
 export default function Page() {
   return (
-    <div className="text-center">
-      <header className="flex min-h-screen flex-col items-center justify-center bg-gray-900 text-lg text-white">
-        <img src={logo} className="h-[40vmin]" alt="logo" />
-        <p className="mb-8">
-          Edit <code className="font-mono">`src/routes/_index.tsx`</code> and
-          save to reload.
-        </p>
-        <p>
-          <a
-            href="https://deves.deno.dev"
-            className="mx-2 me-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Learn Deves
-          </a>
-          <a
-            href="https://reactjs.org"
-            className="mx-2 me-2 rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <section className="relative overflow-hidden py-32">
+      <div className="absolute inset-x-0 top-0 flex h-full w-full items-center justify-center opacity-100">
+        <img
+          alt="background"
+          src="https://shadcnblocks.com/images/block/patterns/square-alt-grid.svg"
+          className="[mask-image:radial-gradient(75%_75%_at_center,white,transparent)] opacity-90"
+        />
+      </div>
+      <div className="relative z-10 container">
+        <div className="mx-auto flex max-w-5xl flex-col items-center">
+          <div className="flex flex-col items-center gap-6 text-center">
+            <div className="rounded-xl bg-background/30 p-4 shadow-sm backdrop-blur-sm">
+              <img src={logo} alt="logo" className="h-16" />
+            </div>
+            <div>
+              <h1 className="mb-6 text-2xl font-bold tracking-tight text-pretty lg:text-5xl">ESMate</h1>
+              <p className="mx-auto max-w-3xl text-muted-foreground lg:text-xl">
+                Uncomplicate React Single Application Development
+              </p>
+            </div>
+            <div className="mt-1 flex justify-center gap-3">
+              <a href="https://github.com/viendinhcom/esmate" target="__blank">
+                <Button className="shadow-sm transition-shadow hover:shadow">Learn More</Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
