@@ -5,8 +5,8 @@
   "description": "Uncomplicate JavaScript",
   "private": true,
   "scripts": {
-    "fix": "turbo run fix",
-    "check": "turbo run check",
+    "fix": "turbo run --filter='./packages/*' fix",
+    "check": "turbo run --filter='./packages/*' check",
     "dev": "turbo run --filter='./packages/*' dev",
     "build": "turbo run --filter='./packages/*' build",
     "release": "changeset version && changeset publish"
