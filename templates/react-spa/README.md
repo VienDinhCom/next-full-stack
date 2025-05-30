@@ -1,9 +1,10 @@
-# Deves React
+# ESMate React
 
-This project was bootstrapped with [Deves](https://deves.deno.dev/).
+This project was bootstrapped with [ESMate](https://github.com/viendinhcom/esmate), and:
 
-It also use [React Router](https://reactrouter.com/) with
-[File Route Conventions](https://reactrouter.com/how-to/file-route-conventions).
+- [React Router](https://reactrouter.com)
+- [File-based Routing](https://reactrouter.com/how-to/file-route-conventions)
+- [Tailwind with Shadcn](https://www.npmjs.com/package/@esmate/shadcn)
 
 ## Available Scripts
 
