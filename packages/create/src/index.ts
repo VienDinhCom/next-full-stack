@@ -35,7 +35,7 @@ const main = defineCommand({
   async run({ args }) {
     try {
       let template = args.template;
-      let name = kebabCase(args.name || args.template);
+      let name = kebabCase(args.name || args.template || "");
 
       const templates = ["react-spa", "astro-react"];
 
@@ -53,8 +53,8 @@ const main = defineCommand({
 
       fs.writeFileSync(packageJsonPath, JSON.stringify({ name, ...omit(packageJson, ["name"]) }, null, 2));
 
-      consola.info(`\nScaffolding project in ${path.join(process.cwd(), name)}...`);
-      consola.info(`\nDone. Now run:\n`);
+      consola.log(`\nScaffolding project in ${path.join(process.cwd(), name)}...`);
+      consola.log(`\nDone. Now run:\n`);
 
       consola.log(`cd ${name}`);
       consola.log(`npm install`);
